@@ -1,9 +1,10 @@
-Custom Commands
-Reporting
+Authentication
 CI/CD - Free time
 Cypress Studio
 Cypress Dashboard
 Cypress BDD Framework
+Component Testing
+
 
 Cypress with TypeScript
 npm init -y
