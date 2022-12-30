@@ -5,6 +5,7 @@ module.exports = defineConfig({
     watchForFileChanges: false,
     "video": false,
     // defaultCommandTimeout: 30000,
+    // screenshotOnRunFailure: false,
     setupNodeEvents(on, config) { }
   },
 });
