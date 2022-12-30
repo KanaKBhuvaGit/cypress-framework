@@ -1,0 +1,12 @@
+Custom Commands
+Reporting
+CI/CD - Free time
+Cypress Studio
+Cypress Dashboard
+Cypress BDD Framework
+
+Cypress with TypeScript
+npm init -y
+npm install cypress
+npm install typescript
+npx tsc --init --types cypress --lib dom,es6
