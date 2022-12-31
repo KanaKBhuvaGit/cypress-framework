@@ -1,5 +1,5 @@
-import ENDPOINTS from '../../../constants/endpoints';
-import { NEW_USER, REGISTER, ERROR_MESSAGES } from '../../../constants';
+import ENDPOINTS from '../../fixtures/constants/endPoints';
+import { NEW_USER, REGISTER, ERROR_MESSAGES } from '../../fixtures/constants';
 
 describe('Register API', () => {
     context('POST requests', () => {

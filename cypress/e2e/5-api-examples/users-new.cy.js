@@ -1,4 +1,4 @@
-import ENDPOINTS from '../../../constants/endpoints';
+import ENDPOINTS from '../../fixtures/constants/endpoints';
 import {
     NEW_USER,
     REGISTER,

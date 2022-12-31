@@ -17,6 +17,8 @@ It doesn’t support multiple tabs but again there are some workarounds.
 It has limited support for iframe/popup handling. 
 It doesn’t allow to run tests on two browsers at the same time, and restricts multi-threading execution. 
 
+
+
 Features
 Time Travel: Cypress takes snapshots as your tests run. Hover over commands in the Command Log to see exactly what happened at each step.
 Debuggability: Stop guessing why your tests are failing. Debug directly from familiar tools like Developer Tools. Our readable errors and stack traces make debugging lightning fast.
@@ -29,9 +31,80 @@ Cross browser Testing: Run tests within Firefox and Chrome-family browsers (incl
 Smart Orchestration: Once you're set up to record to Cypress Cloud, easily parallelize your test suite, rerun failed specs first with Spec Prioritization, and cancel test runs on failures with Auto Cancellation for tight feedback loops.
 Flake Detection: Discover and diagnose unreliable tests with Cypress Cloud's Flaky test management.
 
+
+
 Cypress enables you to write all types of tests:
 End-to-end tests
 Component tests
 Integration tests
 Unit tests
+
+
+
+What is E2E Testing?
+E2E Testing is a technique that tests your app from the web browser through to the back end of your application, as well as testing integrations with third-party APIs and services. These types of tests are great at making sure your entire app is functioning as a cohesive whole.
+
+Benefits of end-to-end tests:
+Ensure your app is functioning as a cohesive whole
+Tests match the user experience
+Can be written by developers or QA Teams
+Can be used for integration testing as well
+
+Considerations for end-to-end tests:
+More difficult to set up, run, and maintain
+Provision testing infrastructure in CI
+Testing certain scenarios require more setup
+
+Common scenarios for end-to-end tests:
+Validating critical workflows like authentication and purchasing
+Ensuring data is persisted and displayed through multiple screens
+Running Smoke Tests and System Checks before deployment
+
+
+
+What is Component Testing?
+Modern web frameworks provide ways to write applications by breaking them into smaller logical units called components. Components can range from fairly small (like a button) to more complex (like a registration form).
+Component tests differ from end-to-end tests in that instead of visiting a URL to pull up an entire app, a component can be "mounted" and tested on its own. This allows you to focus on testing only the component's functionality and not worrying about other nuances with testing a component as part of the larger application.
+
+Benefits of component tests:
+Easier to test components in isolation
+Fast and reliable
+Easy to set up specific scenarios in tests
+Don't rely on any external system to run
+
+Considerations for component tests:
+Do not ensure overall app quality
+Do not call into external APIs/Services
+Usually written by developers working on the component
+
+Common scenarios for component tests:
+Testing a date picker works properly for a variety of scenarios
+That a form shows and hides specific sections based on input
+Testing components coming out of a design system
+Testing logic not tied to a component (like unit tests!)
+
+
+
+Default Selector Priority:
+data-cy
+data-test
+data-testid
+id
+class
+tag
+attributes
+nth-child
+
+
+
+Test Isolation
+The behavior of running tests in a clean browser context is described as testIsolation.
+The test isolation is a global configuration and can be overridden for end-to-end testing at the describe level with the testIsolation option.
+
+When test isolation is enabled, Cypress resets the browser context before each test by:
+clearing the dom state by visiting about:blank
+clearing cookies in all domains
+clearing localStorage in all domains
+clearing sessionStorage in all domains
+
 
