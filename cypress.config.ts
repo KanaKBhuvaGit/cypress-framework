@@ -1,11 +1,13 @@
-const { defineConfig } = require("cypress");
+import { defineConfig } from 'cypress'
 
-module.exports = defineConfig({
+export default defineConfig({
   e2e: {
     watchForFileChanges: false,
     "video": false,
     // defaultCommandTimeout: 30000,
     // screenshotOnRunFailure: false,
-    setupNodeEvents(on, config) { }
+    setupNodeEvents(on, config) {
+
+    }
   },
 });
