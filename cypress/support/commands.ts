@@ -24,10 +24,10 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('dataCy', (value) => {
+Cypress.Commands.add('getByCyData', (value) => {
     return cy.get(`[data-cy=${value}]`)
 })
 
-Cypress.Commands.add("getByData", (selector) => {
+Cypress.Commands.add("getByTestData", (selector) => {
     return cy.get(`[data-test=${selector}]`)
 })
