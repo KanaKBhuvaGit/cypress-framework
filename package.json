@@ -13,7 +13,7 @@
   "author": "Kanak Bhuva",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.2.0",
+    "cypress": "^12.4.0",
     "cypress-downloadfile": "^1.2.3",
     "cypress-file-upload": "^5.0.8",
     "cypress-plugin-api": "^2.9.0",
