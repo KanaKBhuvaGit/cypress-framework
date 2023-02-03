@@ -24,10 +24,20 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('getByTestDataId', (selector) => {
-    cy.get(`button[data-test-id=${selector}]`).click()
-})
+// Cypress.Commands.add('clickButton_child', { prevSubject: 'optional' },
+//     ($element, value) => {
+//         cy.wrap($element).scrollIntoView()
+//         return cy.wrap($element).invoke('text')
+//     }
+// )
 
-Cypress.Commands.add('clickButton', (buttonLabel) => {
+// Cypress.Commands.add('clickButton_both', { prevSubject: 'optional' },
+//     ($element, value) => {
+//         cy.wrap($element).scrollIntoView()
+//         return cy.wrap($element).invoke('text')
+//     }
+// )
+
+Cypress.Commands.add('simpleClick', (buttonLabel) => {
     cy.get('button').contains(buttonLabel).click();
 })

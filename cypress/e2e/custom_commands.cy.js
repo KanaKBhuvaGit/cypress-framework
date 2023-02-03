@@ -4,6 +4,6 @@ describe('Demo', () => {
     })
 
     it('Custom command', () => {
-        cy.clickButton('Retrieve password')
+        cy.simpleClick('Retrieve password')
     })
 })
