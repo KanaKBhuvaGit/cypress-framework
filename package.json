@@ -1,22 +1,15 @@
 {
   "name": "cypressautomation",
   "version": "1.0.0",
-  "description": "Cypress Exercises",
+  "description": "Page object model",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:open": "cypress open",
-    "generate-jsonreport": "cypress run--reporter mochawesome",
-    "merge-report": "mochawesome-merge cypress/report/mochawesome-report/*.json | out-file -encoding ascii cypress/report/output.json",
-    "generate-htmlreport": "marge cypress ./report/output.json --reportDir ./ --inline"
+    "cypress:open": "cypress open"
   },
   "author": "Kanak Bhuva",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.4.0",
-    "cypress-plugin-api": "^2.9.0",
-    "mochawesome": "^7.1.3",
-    "mochawesome-merge": "^4.2.2",
-    "mochawesome-report-generator": "^6.2.0"
+    "cypress": "^12.4.0"
   }
 }
