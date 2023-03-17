@@ -1,4 +1,3 @@
-/// <reference types="cypress" />
 
 describe('Users API', () => {
     beforeEach(() => cy.request('/users').as('users'));
