@@ -15,7 +15,7 @@ export const EXISTING_USER = {
     avatar: 'https://reqres.in/img/faces/1-image.jpg',
 };
 
-export const NEW_USER = {
+export const NEW_USER_OLD = {
     id,
     email,
     firstName,
@@ -41,3 +41,13 @@ export const ERROR_MESSAGES = {
     MISSING_EMAIL_OR_USERNAME: 'Missing email or username',
     MISSING_PASSWORD: 'Missing password',
 };
+
+export const NEW_USER = {
+    "name": "morpheus",
+    "job": "leader"
+}
+
+export const UPDATE_USER = {
+    "name": "morpheus",
+    "job": "zion resident"
+}

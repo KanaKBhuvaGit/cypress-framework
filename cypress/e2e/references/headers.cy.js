@@ -1,6 +1,10 @@
 
 import ENDPOINTS from '../../fixtures/constants/endPoints';
 
+Cypress.Commands.add('getEndpointHeader', (header) => {
+    cy.get('@usersEndpoint').its('headers').its(header);
+});
+
 describe('Headers', () => {
     beforeEach('should request the endpoint under test', () => {
         cy.request(ENDPOINTS.users).as('usersEndpoint');

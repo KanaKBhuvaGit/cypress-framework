@@ -23,7 +23,3 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-
-Cypress.Commands.add('getEndpointHeader', (header) => {
-    cy.get('@usersEndpoint').its('headers').its(header);
-});
