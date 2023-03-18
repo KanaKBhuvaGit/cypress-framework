@@ -1,15 +1,24 @@
 {
-  "name": "cypressautomation",
+  "name": "demo",
   "version": "1.0.0",
-  "description": "Page object model",
+  "description": "Created by Kanak",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:open": "cypress open"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Kanak Bhuva",
+  "keywords": [],
+  "author": "Kanak",
   "license": "ISC",
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/e2e/**/**/*.{js,ts}"
+  },
   "devDependencies": {
-    "cypress": "^12.4.0"
+    "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "@cypress/xpath": "^2.0.3",
+    "@deploysentinel/cypress-recorder": "^0.1.0",
+    "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
+    "cypress": "^12.8.1",
+    "esbuild": "^0.17.12"
   }
 }
