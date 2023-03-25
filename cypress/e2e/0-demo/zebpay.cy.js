@@ -3,7 +3,6 @@ const { recurse } = require("cypress-recurse")
 describe('Zebpay exercise', () => {
 
   before(() => {
-    //"cypress-recurse": "^1.27.0"
     Cypress.on('uncaught:exception', (err, runnable) => {
       return false
     })
@@ -38,6 +37,7 @@ describe('Zebpay exercise', () => {
       const minValTitle = title[twenty_four.indexOf(minVal)]
       cy.log("Maximum 24% " + maxValTitle + ":" + maxVal)
       cy.log("Minimum 24%" + minValTitle + ":" + minVal)
+      expect().to.include()
     })
   })
 

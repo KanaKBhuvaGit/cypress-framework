@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe('We will make a connection with Postgres', () => {
     it('First connection', () => {
         cy.task("connectDB", "SELECT * FROM public.tasks ORDER BY id ASC LIMIT 100").then((res) => {
