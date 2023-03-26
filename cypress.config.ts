@@ -6,6 +6,7 @@ export default defineConfig({
     "video": false,
     // defaultCommandTimeout: 30000,
     // screenshotOnRunFailure: false,
+    // specPattern:[],
     setupNodeEvents(on, config) {
 
     }
