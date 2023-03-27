@@ -101,5 +101,6 @@
   "include": [
     "**/*.ts",
     "support/cypress.d.ts"
-  ]
+  ],
+  "extends": "cypress"
 }
