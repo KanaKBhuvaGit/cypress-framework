@@ -102,5 +102,5 @@
     "**/*.ts",
     "support/cypress.d.ts"
   ],
-  "extends": "cypress"
+  "extends": "cypress",
 }
