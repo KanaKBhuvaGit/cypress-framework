@@ -23,7 +23,6 @@
     "mochawesome-merge": "^4.2.2",
     "mochawesome-report-generator": "^6.2.0",
     "cypress-recurse": "^1.27.0",
-    "cypress-xpath": "^2.0.1",
     "pg": "^8.8.0"
   }
 }

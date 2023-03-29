@@ -5,7 +5,7 @@ describe('Tutorialspoint Test', function () {
         cy.visit("https://the-internet.herokuapp.com/javascript_alerts")
         //complete page screenshot with filename - CompletePage
         cy.screenshot('CompletePage')
-        cy.pause()
+        // cy.pause()
         //screenshot of particular element
         cy.get(':nth-child(2) > button').screenshot()
     });
