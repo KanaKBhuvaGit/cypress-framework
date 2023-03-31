@@ -8,8 +8,8 @@ describe('test login  ', () => {
   beforeEach(() => {
     cy.visit('https://practicetestautomation.com/practice-test-login/')
   })
-  
-  TestFilters(['regression'], () => {
+
+  TestFilters(['regression', 'smoke'], () => {
     it('Test Case 1: Positive LogIn test', () => {
       lPage.enterUsername("student")
       lPage.enterPassword("Password123")
@@ -30,12 +30,14 @@ describe('test login  ', () => {
     })
   })
 
-  it('Test Case 3: Negative password test', () => {
-    lPage.enterUsername("student")
-    lPage.enterPassword("incorrectPassword")
-    lPage.clickSubmit()
-    lPage.getError().should('be.visible')
-    lPage.getError().should('have.text', 'Your password is invalid!')
+  TestFilters([], () => {
+    it('Test Case 3: Negative password test', () => {
+      lPage.enterUsername("student")
+      lPage.enterPassword("incorrectPassword")
+      lPage.clickSubmit()
+      lPage.getError().should('be.visible')
+      lPage.getError().should('have.text', 'Your password is invalid!')
+    })
   })
 
 })
