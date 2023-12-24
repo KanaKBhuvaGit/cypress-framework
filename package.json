@@ -5,7 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:run": "npx cypress run"
+    "cypress:info": "npx cypress info",
+    "cypress:verify": "npx cypress verify",
+    "cypress:version": "npx cypress version",
+    "cypress:cache:path": "npx cypress cache path ${cache_path}",
+    "cypress:cache:list":"npx cypress cache list",
+    "cypress:cache:list:size":"npx cypress cache list --size",
+    "cypress:open": "npx cypress open",
+    "cypress:run": "npx cypress run",
+    "cypress:cache:clear":"npx cypress cache clear",
+    "cypress:cache:prune":"npx cypress cache prune",
+    "cypress:install":"npx cypress install"
   },
   "author": "Kanak Bhuva",
   "license": "ISC",
