@@ -9,17 +9,23 @@
     "cy:verify": "npx cypress verify",
     "cy:version": "npx cypress version",
     "cy:cache:path": "npx cypress cache path ${cache_path}",
-    "cy:cache:list":"npx cypress cache list",
-    "cy:cache:list:size":"npx cypress cache list --size",
+    "cy:cache:list": "npx cypress cache list",
+    "cy:cache:list:size": "npx cypress cache list --size",
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run",
-    "cy:cache:clear":"npx cypress cache clear",
-    "cy:cache:prune":"npx cypress cache prune",
-    "cy:install":"npx cypress install"
+    "cy:cache:clear": "npx cypress cache clear",
+    "cy:cache:prune": "npx cypress cache prune",
+    "cy:install": "npx cypress install",
+    "ma:cy:run":"npx cypress run --reporter mochawesome \\ --reporter-options reportDir=cypress/results,overwrite=false,html=false,json=true",
+    "ma:merge":"npx mochawesome-merge 'cypress/results/*.json' > mochawesome.json",
+    "ma:report":"npx marge mochawesome.json"
   },
   "author": "Kanak Bhuva",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.2.0"
+    "cypress": "^12.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }
