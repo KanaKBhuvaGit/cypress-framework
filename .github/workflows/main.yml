@@ -10,3 +10,10 @@ jobs:
         uses: cypress-io/github-action@v6.5.0
         with: 
           browser: chrome
+      - uses: actions/download-artifact@v4
+        with:
+          name: my-artifact
+          path: cypress/videos/**
+          merge-multiple: true
+      - name: Display structure of downloaded files
+        run: ls -R
