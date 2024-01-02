@@ -10,13 +10,11 @@ jobs:
         uses: cypress-io/github-action@v6.5.0
         with: 
           browser: chrome
-  release-project:
-    name: Reports and videos
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download artifacts
-        uses: actions/download-artifact@v4
+      - name: Create a cypress run Artifact
+        uses: actions/upload-artifact@v4.0.0
         with:
-          path: ./cypress/videos/**
+          path: cypress/videos/**
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v4.1.0
+        with:
           merge-multiple: true
-          retention-days: 3
