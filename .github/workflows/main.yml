@@ -20,19 +20,29 @@ jobs:
       - name: Cypress run screenshots        
         uses: actions/upload-artifact@v4.0.0
         with:
-          name: screenshots
+          name: Screenshots
           path: cypress/screenshots/**
           retention-days: 3
           if-no-files-found: ignore
       - name: Cypress run reports        
         uses: actions/upload-artifact@v4.0.0
         with:
-          name: reports
+          name: Reports
           path: mochawesome-report/**
           retention-days: 3
           if-no-files-found: ignore
-      - name: Download a Build Artifact
+      - name: Download a videos
         uses: actions/download-artifact@v4.1.0
         with:
-          name: Reports, videos and screenshots
+          name: Videos
+          merge-multiple: true
+      - name: Download a screenshots
+        uses: actions/download-artifact@v4.1.0
+        with:
+          name: Screenshots
+          merge-multiple: true
+      - name: Download a Reports
+        uses: actions/download-artifact@v4.1.0
+        with:
+          name: Reports
           merge-multiple: true
