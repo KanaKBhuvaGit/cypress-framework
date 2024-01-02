@@ -31,13 +31,24 @@ jobs:
           path: mochawesome-report/**
           retention-days: 3
           if-no-files-found: ignore
-      - name: Download a videos
+      # - name: Download a videos
+      #   uses: actions/download-artifact@v4.1.0
+      #   with:
+      #     name: Videos
+      #     merge-multiple: true
+      # - name: Download a screenshots
+      #   uses: actions/download-artifact@v4.1.0
+      #   with:
+      #     name: Screenshots
+      #     merge-multiple: true
+      # - name: Download a Reports
+      #   uses: actions/download-artifact@v4.1.0
+      #   with:
+      #     name: Reports
+      #     merge-multiple: true
+      - name: Download an artifacts
         uses: actions/download-artifact@v4.1.0
         with:
-          name: Videos
+          pattern: *.zip
           merge-multiple: true
-      - name: Download a screenshots
-        uses: actions/download-artifact@v4.1.0
-        with:
-          name: Screenshots
-          merge-multiple: true
+      
