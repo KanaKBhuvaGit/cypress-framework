@@ -10,21 +10,21 @@ jobs:
         uses: cypress-io/github-action@v6.5.0
         with: 
           browser: chrome
-      - name: Cypress run videos
+      - name: Cypress Artifacts - Videos
         uses: actions/upload-artifact@v4.0.0
         with:
           name: Videos
           path: cypress/videos/**
           retention-days: 3
           if-no-files-found: ignore
-      - name: Cypress run screenshots        
+      - name: Cypress Artifacts - Screenshots        
         uses: actions/upload-artifact@v4.0.0
         with:
           name: Screenshots
           path: cypress/screenshots/**
           retention-days: 3
           if-no-files-found: ignore
-      - name: Cypress run reports        
+      - name: Cypress Artifacts - Reports        
         uses: actions/upload-artifact@v4.0.0
         with:
           name: Reports
@@ -40,9 +40,4 @@ jobs:
         uses: actions/download-artifact@v4.1.0
         with:
           name: Screenshots
-          merge-multiple: true
-      - name: Download a Reports
-        uses: actions/download-artifact@v4.1.0
-        with:
-          name: Reports
           merge-multiple: true
