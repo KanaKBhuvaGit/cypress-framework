@@ -42,3 +42,7 @@ artifacts:
     - cypress/screenshots/**
     - cypress/videos/**
     - cypress/results/**
+  discard-paths: yes
+cache:
+  paths:
+    - node_modules/**
