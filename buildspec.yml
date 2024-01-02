@@ -37,3 +37,8 @@ phases:
   build:
     commands:
       - npm run cy:run
+artifacts:
+  files:
+    - cypress/screenshots/**
+    - cypress/videos/**
+    - cypress/results/**
