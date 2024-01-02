@@ -89,6 +89,8 @@ describe('example to-do app', () => {
         .parent()
         .find('input[type=checkbox]')
         .check()
+      
+      cy.screenshot({ padding: 10 })
     })
 
     it('can filter for uncompleted tasks', () => {
