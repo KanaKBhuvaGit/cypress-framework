@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:config:window":"echo \"Test 1: %npm_config_arg%\"",
-    "test:config:linux":"echo \"Test 2: $npm_config_arg\"",
+    "test:config:window": "echo \"Test 1: %npm_config_arg%\"",
+    "test:config:linux": "echo \"Test 2: $npm_config_arg\"",
     "cy:info": "npx cypress info",
     "cy:verify": "npx cypress verify",
     "cy:version": "npx cypress version",
@@ -25,10 +25,12 @@
     "ma:merge": "npx mochawesome-merge 'cypress/results/*.json' > mochawesome.json",
     "ma:report": "npx marge mochawesome.json",
     "ma:clear": "rm -r cypress/results mochawesome-report mochawesome.json || true",
-    "allure:cy:run":"npx cypress run --env allure=true",
+    "allure:cy:run": "npx cypress run --env allure=true",
     "allure:report": "allure generate allure-results --clean -o allure-report",
     "allure:open": "allure open",
-    "allure:clear": "rm -r allure-results allure-report || true"
+    "allure:clear": "rm -r allure-results allure-report || true",
+    "cy:parallel": "cypress-parallel -s cy:run -t 1 -d cypress/e2e -a '\"--browser chrome --spec cypress/e2e/1-getting-started/*.js\"'",
+    "cy:parallel:clear": "rm -r runner-results cypress/parallel-weights.json multi-reporter-config.json || true"
   },
   "author": "Kanak Bhuva",
   "license": "ISC",
@@ -39,5 +41,8 @@
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.3.0",
     "mochawesome-report-generator": "^6.2.0"
+  },
+  "dependencies": {
+    "cypress-parallel": "^0.14.0"
   }
 }
