@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "test:config:window":"echo \"Test 1: %npm_config_arg%\"",
+    "test:config:linux":"echo \"Test 2: $npm_config_arg\"",
     "cy:info": "npx cypress info",
     "cy:verify": "npx cypress verify",
     "cy:version": "npx cypress version",
