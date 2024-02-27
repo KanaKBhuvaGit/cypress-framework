@@ -23,3 +23,19 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('readExcel', (inputFilePath) => {
+    return cy.task('readExcel', { filePath: inputFilePath })
+})
+
+Cypress.Commands.add('writeExcel', (inputFilePath, inputSheetName,  inputFileData) => {
+    return cy.task('writeExcel', { filePath: inputFilePath, sheetName: inputSheetName,  data: inputFileData })
+})
+
+Cypress.Commands.add('readCSV', (inputFilePath) => {
+    return cy.task('readCSV', { filePath: inputFilePath })
+})
+
+Cypress.Commands.add('writeToCSV', (inputFilePath, inputFileData) => {
+    return cy.task('writeToCSV', {filePath: inputFilePath, csvData: inputFileData})
+})
